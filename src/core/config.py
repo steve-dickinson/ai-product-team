@@ -19,6 +19,8 @@ class Settings:
     session_budget_usd: float
     max_turns_per_phase: int
     log_level: str
+    mongodb_uri: str = ""
+    mongodb_database: str = ""
 
     @classmethod
     def from_env(cls) -> Settings:
@@ -29,6 +31,8 @@ class Settings:
             session_budget_usd=float(os.environ.get("SESSION_BUDGET_USD", "15.0")),
             max_turns_per_phase=int(os.environ.get("MAX_TURNS_PER_PHASE", "20")),
             log_level=os.environ.get("LOG_LEVEL", "INFO"),
+            mongodb_uri=os.environ.get("MONGODB_URI", "mongodb://admin:changeme_mongo_pwd@localhost:27018"),
+            mongodb_database=os.environ.get("MONGODB_DATABASE", "ai_rd_team"),
         )
 
 settings = Settings.from_env()
