@@ -44,4 +44,5 @@ researcher_agent = Agent(
     system_prompt=RESEARCHER_SYSTEM_PROMPT,
     output_type=MarketResearch,
     retries=2,
+    defer_model_check=True,
 )

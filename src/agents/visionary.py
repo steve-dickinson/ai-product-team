@@ -35,4 +35,5 @@ visionary_agent = Agent(
     system_prompt=VISIONARY_SYSTEM_PROMPT,
     output_type=IdeaBatch,
     retries=2,
+    defer_model_check=True,
 )

@@ -49,6 +49,7 @@ Your confidence score should reflect technical feasibility, NOT market potential
 architect_agent = Agent(
     "anthropic:claude-sonnet-4-20250514",
     system_prompt=ARCHITECT_SYSTEM_PROMPT,
-    result_type=FeasibilityChallenge,
+    output_type=FeasibilityChallenge,
     retries=2,
+    defer_model_check=True,
 )

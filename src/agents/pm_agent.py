@@ -57,4 +57,5 @@ pm_agent = Agent(
    output_type=ProductPRD,
    system_prompt=PM_SYSTEM_PROMPT,
    retries=2,
+   defer_model_check=True,
 )

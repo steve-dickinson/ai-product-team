@@ -19,6 +19,7 @@ visionary_debate_agent = Agent(
         "Always end your response with 'Confidence: X.X' where X.X is 0.0 to 1.0."
     ),
     output_type=str,
+    defer_model_check=True,
 )
 
 architect_debate_agent = Agent(
@@ -31,4 +32,5 @@ architect_debate_agent = Agent(
         "Always end your response with 'Confidence: X.X' where X.X is 0.0 to 1.0."
     ),
     output_type=str,
+    defer_model_check=True,
 )
